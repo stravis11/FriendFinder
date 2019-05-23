@@ -3,26 +3,26 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
-const mysql = require("mysql");
-const {
-  env: { DB_HOST, DB_USER, DB_PASSWORD }
-} = process;
 
-// create the connection information for the sql database
-const db = mysql.createConnection({
-  // hostname, stored in .env
-  host: DB_HOST,
+// const {
+//   env: { DB_HOST, DB_USER, DB_PASSWORD }
+// } = process;
 
-  // Your port; if not 3306
-  port: 3306,
+// // create the connection information for the sql database
+// const db = mysql.createConnection({
+//   // hostname, stored in .env
+//   host: DB_HOST,
 
-  // Your username, stored in .env
-  user: DB_USER,
+//   // Your port; if not 3306
+//   port: 3306,
 
-  // Your password, stored in .env
-  password: DB_PASSWORD,
-  database: "friendfinder"
-});
+//   // Your username, stored in .env
+//   user: DB_USER,
+
+//   // Your password, stored in .env
+//   password: DB_PASSWORD,
+//   database: "friendfinder"
+// });
 
 const app = express();
 
@@ -37,8 +37,8 @@ app.use(express.json());
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
-db.connect(err => {
-  if (err) throw err;
+// db.connect(err => {
+//   if (err) throw err;
 
-  app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
-});
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+// });
