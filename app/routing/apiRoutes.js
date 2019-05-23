@@ -1,20 +1,11 @@
-var friendData = require("../data/friends");
+const friends = require("../data/friends");
 
-module.exports = function(app) {
+module.exports = app => {
   app.get("/api/friends", (req, res) => {
-    db.query("SELECT * FROM friendfinder", (err, data) => {
-      res.send(data);
-    });
+    res.json(friends);
+  });
 
-    app.post("/api/friends", (req, res) => {
-      db.query(
-        "INSERT INTO friendfinder SET name=?, photo=?, scores=?",
-        [req.body.name, req.body.photo, req.body.scores],
-        (err, result) => {
-          if (err) throw err;
-          res.send({ success: "true!" });
-        }
-      );
-    });
+  app.post("/api/friends", (req, res) => {
+    friends.push(req.body);
   });
 };
