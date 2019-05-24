@@ -80,9 +80,9 @@
       </div>
       <hr />
       <h3>Question #1</h3>
-      <h4>Question 1</h4>
+      <h4>I like to travel by Portal Gun.</h4>
       <div class="form-group">
-        <select name="quest1" id="quest1">
+        <select name="question1" id="question1">
           <option value="">Select an Option</option>
           <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
@@ -92,9 +92,9 @@
         </select>
       </div>
       <h3>Question #2</h3>
-      <h4>Question 2</h4>
+      <h4>I do my best work when I'm inebriated.</h4>
       <div class="form-group">
-        <select name="quest2" id="quest2">
+        <select name="question2" id="question2">
           <option value="">Select an Option</option>
           <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
@@ -104,9 +104,9 @@
         </select>
       </div>
       <h3>Question #3</h3>
-      <h4>Question 3</h4>
+      <h4>I am easily manipulated.</h4>
       <div class="form-group">
-        <select name="quest3" id="quest3">
+        <select name="question3" id="question3">
           <option value="">Select an Option</option>
           <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
@@ -116,9 +116,9 @@
         </select>
       </div>
       <h3>Question #4</h3>
-      <h4>Question 4</h4>
+      <h4>People tend to underestimate my intelligence.</h4>
       <div class="form-group">
-        <select name="quest4" id="quest4">
+        <select name="question4" id="question4">
           <option value="">Select an Option</option>
           <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
@@ -128,9 +128,69 @@
         </select>
       </div>
       <h3>Question #5</h3>
-      <h4>Question 5</h4>
+      <h4>I enjoy working with animals.</h4>
       <div class="form-group">
-        <select name="quest5" id="quest5">
+        <select name="question5" id="question5">
+          <option value="">Select an Option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <h3>Question #6</h3>
+      <h4>I have a fear of abandonment.</h4>
+      <div class="form-group">
+        <select name="question6" id="question6">
+          <option value="">Select an Option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <h3>Question #7</h3>
+      <h4>I am extremely insecure.</h4>
+      <div class="form-group">
+        <select name="question7" id="question7">
+          <option value="">Select an Option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <h3>Question #8</h3>
+      <h4>I have an inner strength.</h4>
+      <div class="form-group">
+        <select name="question8" id="question8">
+          <option value="">Select an Option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <h3>Question #9</h3>
+      <h4>I crave popularity among my peers.</h4>
+      <div class="form-group">
+        <select name="question9" id="question9">
+          <option value="">Select an Option</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+      <h3>Question #10</h3>
+      <h4>I have a strong bond with my family.</h4>
+      <div class="form-group">
+        <select name="question10" id="question10">
           <option value="">Select an Option</option>
           <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
@@ -170,19 +230,34 @@
         let imag = $("#image")
           .val()
           .trim();
-        let ans1 = $("#quest1")
+        let ans1 = $("#question1")
           .val()
           .trim();
-        let ans2 = $("#quest2")
+        let ans2 = $("#question2")
           .val()
           .trim();
-        let ans3 = $("#quest3")
+        let ans3 = $("#question3")
           .val()
           .trim();
-        let ans4 = $("#quest4")
+        let ans4 = $("#question4")
           .val()
           .trim();
-        let ans5 = $("#quest5")
+        let ans5 = $("#question5")
+          .val()
+          .trim();
+        let ans6 = $("#question6")
+          .val()
+          .trim();
+        let ans7 = $("#question7")
+          .val()
+          .trim();
+        let ans8 = $("#question8")
+          .val()
+          .trim();
+        let ans9 = $("#question9")
+          .val()
+          .trim();
+        let ans10 = $("#question10")
           .val()
           .trim();
 
@@ -193,9 +268,14 @@
           ans2 === "" ||
           ans3 === "" ||
           ans4 === "" ||
-          ans5 === ""
+          ans5 === "" ||
+          ans6 === "" ||
+          ans7 === "" ||
+          ans8 === "" ||
+          ans9 === "" ||
+          ans10 === ""
         ) {
-          alert("Please fill in all fields");
+          alert("Please answer all the questions");
         } else {
           newUser = {
             name: userName,
@@ -216,11 +296,16 @@
 
           $("#name").val("");
           $("#image").val("");
-          $("#quest1").val("");
-          $("#quest2").val("");
-          $("#quest3").val("");
-          $("#quest4").val("");
-          $("#quest5").val("");
+          $("#question1").val("");
+          $("#question2").val("");
+          $("#question3").val("");
+          $("#question4").val("");
+          $("#question5").val("");
+          $("#question6").val("");
+          $("#question7").val("");
+          $("#question8").val("");
+          $("#question9").val("");
+          $("#question10").val("");
         }
       });
 
@@ -246,12 +331,12 @@
         let diff = 0;
         let count = 0;
 
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 10; i++) {
           diff += Math.abs(user[i] - friend.scores[i]);
           count++;
         }
 
-        if (count === 5) {
+        if (count === 10) {
           if (diff < bestFriend.diff) {
             bestFriend.diff = diff;
             bestFriend.name = friend.name;
