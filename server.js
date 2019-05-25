@@ -5,14 +5,10 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 // Tells Express to give the browser access to anything inside public
-app.use(express.static(path.join(__dirname, "./app/public")));
+app.use(express.static("app/public"));
 
 // Sets up the Express app to handle data parsing
-app.use(
-  express.urlencoded({
-    extended: true
-  })
-);
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Routing

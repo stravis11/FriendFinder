@@ -1,290 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>FRIEND FINDER SURVEY</title>
-    <!--Reset CSS-->
-    <link rel="stylesheet" href="../css/reset.css" />
-    <!--Bootstrap-->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <!--CSS Main File-->
-    <link rel="stylesheet" href="../css/style.css" />
-    <!-- Link to the jQuery Library -->
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-2.1.1.min.js"
-    ></script>
 
-    <!-- Compiled and minified Materialize CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
-    />
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
 
-    <!-- Compiled and minified Materialize JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-  </head>
-  <body>
-    <h1>Answery the survey to find your friend</h1>
-    <div id="container">
-      <h3>Answer below questions:</h3>
-      <div id="surveyquestion">
-        <div class="input-field col s6">
-          <h5>Your Name (Required)</h5>
-          <input
-            type="text"
-            class="validate"
-            placeholder="Your Name Here"
-            id="userName"
-          />
-        </div>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-        <div class="input-field col s6">
-          <h5>Photo Image (Required)</h5>
-          <input
-            type="text"
-            class="validate"
-            placeholder="Paste your URL here"
-            id="userPhoto"
-            size="85"
-          />
-        </div>
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-        <!-- Survey Questions -->
-        <div class="input-field col s12">
-          <h3>Question #1</h3>
-          <h4>I like to travel by Portal Gun.</h4>
-          <select id="question1">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-        </div>
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
-        <div class="input-field col s12">
-          <h3>Question #2</h3>
-          <h4>I do my best work when I'm inebriated.</h4>
-          <select id="question2">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-        </div>
+</head>
 
-        <div class="input-field col s12">
-          <h3>Question #3</h3>
-          <h4>I am easily manipulated.</h4>
-          <select id="question3">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-        </div>
+<body>
 
-        <div class="input-field col s12">
-          <h3>Question #4</h3>
-          <h4>People tend to underestimate my intelligence.</h4>
-          <select id="question4">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-        </div>
+  <div class="container">
 
-        <div class="input-field col s12">
-          <h3>Question #5</h3>
-          <h4>I enjoy working with animals.</h4>
-          <select id="question5">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-        </div>
+    <h2>Survey Questions</h2>
+    <hr>
 
-        <div class="input-field col s12">
-          <h3>Question #6</h3>
-          <h4>I have a fear of abandonment.</h4>
-          <select id="question6">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-        </div>
+    <h3><strong>About You</strong></h3>
+    <h4>Name (Required)</h4>
+    <input type="text" id="name" class="form-control" required>
 
-        <div class="input-field col s12">
-          <h3>Question #7</h3>
-          <h4>I am extremely insecure.</h4>
-          <select id="question7">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-        </div>
+    <h4>Link to Photo Image (Required)</h4>
+    <input type="text" id="photo" class="form-control" required>
 
-        <div class="input-field col s12">
-          <h3>Question #8</h3>
-          <h4>I have an inner strength.</h4>
-          <select id="question8">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-        </div>
+    <hr>
 
-        <div class="input-field col s12">
-          <h3>Question #9</h3>
-          <h4>I crave popularity among my peers.</h4>
-          <select id="question9">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-        </div>
+    <h3><strong>Question 1</strong></h3>
+    <h4>I like to travel by Portal Gun.</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
 
-        <div class="input-field col s12">
-          <h3>Question #10</h3>
-          <h4>I have a strong bond with my family.</h4>
-          <select id="question10">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-          </select>
-        </div>
-        <hr />
-        <div>
-          <button
-            class="btn waves-effect waves-light"
-            type="submit"
-            name="action"
-            id="submitButton"
-          >
-            Submit Responses
-          </button>
-        </div>
+    <h3><strong>Question 2</strong></h3>
+    <h4>I do my best work when I'm inebriated.</h4>
+    <select class="chosen-select" id="q2">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+
+    <h3><strong>Question 3</strong></h3>
+    <h4>I am easily manipulated.</h4>
+    <select class="chosen-select" id="q3">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+
+    <h3><strong>Question 4</strong></h3>
+    <h4>People tend to underestimate my intelligence.</h4>
+    <select class="chosen-select" id="q4">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+
+    <h3><strong>Question 5</strong></h3>
+    <h4>I enjoy working with animals.</h4>
+    <select class="chosen-select" id="q5">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+
+    <h3><strong>Question 6</strong></h3>
+    <h4>I have a fear of abandonment.</h4>
+    <select class="chosen-select" id="q6">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+
+    <h3><strong>Question 7</strong></h3>
+    <h4>I am extremely insecure.</h4>
+    <select class="chosen-select" id="q7">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 8</strong></h3>
+    <h4>I have an inner strength.</h4>
+    <select class="chosen-select" id="q8">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 9</strong></h3>
+    <h4>I crave popularity among my peers.</h4>
+    <select class="chosen-select" id="q9">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <h3><strong>Question 10</strong></h3>
+    <h4>I have a strong bond with my family.</h4>
+    <select class="chosen-select" id="q10">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+
+    <br>
+    <br>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+        aria-hidden="true"></i>
+      Submit</button>
+
+    <hr>
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/stravis11/FriendFinder">GitHub
+            Repo</a></p>
       </div>
-    </div>
-    <div>
-      <a href="/api/friends">API Friends List</a>
-      <span>|</span>
-      <a href="https://github.com/stravis11/FriendFinder" target="_blank"
-        >Github Repo</a
-      >
-    </div>
+    </footer>
 
-    <!-- Modal -->
-    <div id="modal1" class="modal">
+  </div>
+
+  <!-- Modal -->
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
       <div class="modal-content">
-        <h4>Closest Friend Match</h4>
-        <h5 id="userMatch"></h5>
-        <img id="userMatchImage" class="materialboxed" width="650" src="" />
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="#" alt="" width="200" height="200">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
-    </div>
 
-    <!-- Logic -->
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("select").material_select();
-        $(".modal").modal({
-          dismissible: false, // Dismiss modal by clicking outside of the modal
-          opacity: 0.5, // Opacity of modal background
-          inDuration: 300, // Transition in duration
-          outDuration: 200, // Transition out duration
-          startingTop: "4%", // Starting top style attribute
-          endingTop: "10%" // Ending top style attribute
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    // Chosen CSS
+    var config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect": {
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 10
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Oops, nothing found!"
+      },
+      ".chosen-select-width": {
+        width: "95%"
+      }
+    };
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+    // Capture the form inputs
+    $("#submit").on("click", function (event) {
+      event.preventDefault();
+      // Form validation
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function () {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
         });
-      });
-      // Activate submit button
-      $("#submitButton").on("click", function(event) {
-        event.preventDefault();
-        // Gather user inputs
-        var userInput = {
-          name: $("#userName")
-            .val()
-            .trim(),
-          photo: $("#userPhoto")
-            .val()
-            .trim(),
+        $(".chosen-select").each(function () {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+      // If all required fields are filled
+      if (validateForm()) {
+        // Create an object for the user"s data
+        var userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
           scores: [
-            $("#question1")
-              .val()
-              .trim(),
-            $("#question2")
-              .val()
-              .trim(),
-            $("#question3")
-              .val()
-              .trim(),
-            $("#question4")
-              .val()
-              .trim(),
-            $("#question5")
-              .val()
-              .trim(),
-            $("#question6")
-              .val()
-              .trim(),
-            $("#question7")
-              .val()
-              .trim(),
-            $("#question8")
-              .val()
-              .trim(),
-            $("#question9")
-              .val()
-              .trim(),
-            $("#question10")
-              .val()
-              .trim()
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
           ]
         };
-
-        // Add data to friends list
-        $.post("/api/friends", userInput).done(function(data) {
-          // console.log('response = ' + JSON.stringify(data));
-          // Set the name and image values of friend match
-          $("#userMatch").html(data.matchName);
-          $("#userMatchImage").attr("src", data.matchImage);
-          // Pop open the modal dialog
-          $("#modal1").modal("open");
+        // AJAX post the data to the friends API.
+        $.post("/api/friends", userData, function (data) {
+          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+          // Show the modal with the best match
+          $("#results-modal").modal("toggle");
         });
-      });
-    </script>
-  </body>
+      } else {
+        alert("Please fill out all fields before submitting!");
+      }
+    });
+  </script>
+
+</body>
+
 </html>
