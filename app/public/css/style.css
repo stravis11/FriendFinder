@@ -1,0 +1,35 @@
+body {
+  background-image: url("../images/friends.jpg");
+  background-repeat: repeat-y;
+  background-size: 100% 100%;
+  background-color: #423d26 !important;
+}
+html {
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  background-color: #79735a;
+  color: #eae6dc !important;
+}
+
+.btn-pos {
+  align-content: center;
+}
+
+#container {
+  background-color: #eae6dc;
+  height: 100%;
+  width: 50%;
+  display: block;
+  z-index: 1000;
+  align-content: center;
+  margin: auto;
+  border: 5px solid #423d26;
+}
+
+#surveyquestion {
+  align-content: center;
+  text-align: left;
+}
