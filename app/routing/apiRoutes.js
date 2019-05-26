@@ -19,7 +19,7 @@ module.exports = function(app) {
           );
         }
 
-        // Set lowest diff if there is not one
+        // Set lowest diff if none exists
         if (lowestDif == undefined) {
           lowestDif = totalDif;
           indexOfClosestMatch = i;
