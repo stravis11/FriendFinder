@@ -24,147 +24,197 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
     />
 
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <!-- CSS  -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
 
   <body>
+      <main>
     <div class="container">
-      <h2>Survey Questions</h2>
-      <hr />
+        <div class="row">
+            <div class="col s12 z-depth-5 mainpanel">
+                <div id="mainpanel-content">
+      <h1>Survey Questions</h1>
+      <div class="divider"></div>
+      
 
-      <h3><strong>About You</strong></h3>
-      <h4>Name (Required)</h4>
-      <input type="text" id="name" class="form-control" required />
+      <h3>About You</h3>
 
-      <h4>Link to Photo Image (Required)</h4>
-      <input type="text" id="photo" class="form-control" required />
+      <div class="input-field col s6">
+      <h5><i class="material-icons left">account_circle</i> Name (Required)</h5>
+      
+      <input type="text" id="name"  class="validate" placeholder="Your Name Here" />
+      </div>
 
-      <hr />
+      <div class="input-field col s6">
 
+      <h5><i class="material-icons left">photo</i> URL to Photo Image (Required)</h5>
+      
+      <input type="text" id="photo" class="validate" placeholder="URL Goes Here" />
+      </div>
+      
+<!-- Survey Questions -->
+
+<div class="input-field col s12">
       <h3><strong>Question 1</strong></h3>
       <h4>I like to travel by Portal Gun.</h4>
-      <select class="chosen-select" id="q1">
-        <option value=""></option>
+      <select id="q1">
+        <option value="" disabled selected> Select your answer </option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
+</div>
 
+<div class="input-field col s12">
       <h3><strong>Question 2</strong></h3>
       <h4>I do my best work when I'm inebriated.</h4>
-      <select class="chosen-select" id="q2">
-        <option value=""></option>
+      <select id="q2">
+          <option value="" disabled selected> Select your answer </option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
+    </div>
 
+    <div class="input-field col s12">
       <h3><strong>Question 3</strong></h3>
       <h4>I am easily manipulated.</h4>
-      <select class="chosen-select" id="q3">
-        <option value=""></option>
+      <select id="q3">
+          <option value="" disabled selected> Select your answer </option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
+    </div>
 
+    <div class="input-field col s12">
       <h3><strong>Question 4</strong></h3>
       <h4>People tend to underestimate my intelligence.</h4>
-      <select class="chosen-select" id="q4">
-        <option value=""></option>
+      <select id="q4">
+          <option value="" disabled selected> Select your answer </option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
+    </div>
 
+    <div class="input-field col s12">
       <h3><strong>Question 5</strong></h3>
       <h4>I enjoy working with animals.</h4>
-      <select class="chosen-select" id="q5">
-        <option value=""></option>
+      <select id="q5">
+          <option value="" disabled selected> Select your answer </option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
+    </div>
 
+    <div class="input-field col s12">
       <h3><strong>Question 6</strong></h3>
       <h4>I have a fear of abandonment.</h4>
-      <select class="chosen-select" id="q6">
-        <option value=""></option>
+      <select id="q6">
+        <option value="" disabled selected> Select your answer </option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
+    </div>
 
+    <div class="input-field col s12">
       <h3><strong>Question 7</strong></h3>
       <h4>I am extremely insecure.</h4>
-      <select class="chosen-select" id="q7">
-        <option value=""></option>
+      <select id="q7">
+        <option value="" disabled selected> Select your answer </option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
+    </div>
 
+    <div class="input-field col s12">
       <h3><strong>Question 8</strong></h3>
       <h4>I have an inner strength.</h4>
-      <select class="chosen-select" id="q8">
-        <option value=""></option>
+      <select id="q8">
+        <option value="" disabled selected> Select your answer </option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
+    </div>
 
+    <div class="input-field col s12">
       <h3><strong>Question 9</strong></h3>
       <h4>I crave popularity among my peers.</h4>
-      <select class="chosen-select" id="q9">
-        <option value=""></option>
+      <select id="q9">
+        <option value="" disabled selected> Select your answer </option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
+    </div>
 
+    <div class="input-field col s12">
       <h3><strong>Question 10</strong></h3>
       <h4>I have a strong bond with my family.</h4>
-      <select class="chosen-select" id="q10">
-        <option value=""></option>
+      <select id="q10">
+        <option value="" disabled selected> Select your answer </option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-
-      <br />
-      <br />
+    </div>
+  
+  
+    
 
       <!-- Submit Button -->
+      <div>
       <button
         type="submit"
-        class="btn btn-primary btn-lg btn-block"
+        class="btn waves-effect waves-light"
         id="submit"
+        name="action"
       >
-        <i class="fa fa-check-circle" aria-hidden="true"></i> Submit
+      <i class="material-icons right">send</i> Submit
       </button>
+    </div>
+  </main>
 
-      <hr />
+
+  
+
       <footer class="footer">
         <div class="container">
           <p>
@@ -176,70 +226,62 @@
     </div>
 
     <!-- Modal -->
-    <div id="results-modal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">
-              &times;
-            </button>
-            <h2 class="modal-title"><strong>Best Match</strong></h2>
-          </div>
-          <div class="modal-body">
-            <h2 id="match-name"></h2>
-            <img id="match-img" src="#" alt="" width="200" height="200" />
+    <div id="results-modal" class="modal">
+      <div class="modal-content">         
+            <h4>Closest Friend Match</h4>
+			<div class="divider"></div>
+            <h5 id="match-name"></h5>
+            <img id="match-img" class="materialboxed" width="650" src="" />
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">
-              Close
-            </button>
+              <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Take the Survey Again</a>
           </div>
         </div>
-      </div>
-    </div>
+     
 
     <script type="text/javascript">
+$(document).ready(function(){
+    $('select').formSelect();
+    $('.modal').modal({
+    	dismissible: false, // Modal can be dismissed by clicking outside of the modal
+				opacity: .5, // Opacity of modal background
+				inDuration: 300, // Transition in duration
+				outDuration: 200, // Transition out duration
+				startingTop: '4%', // Starting top style attribute
+				endingTop: '10%' // Ending top style attribute
+			});
+});
+ 
+
       // Capture the form inputs
       $("#submit").on("click", function(event) {
         event.preventDefault();
-
+      
+        
         let userName = $("#name")
-          .val()
-          .trim();
+          .val();
         let imag = $("#photo")
-          .val()
-          .trim();
+          .val();
         let ans1 = $("#q1")
-          .val()
-          .trim();
+          .val();
         let ans2 = $("#q2")
-          .val()
-          .trim();
+          .val();
         let ans3 = $("#q3")
-          .val()
-          .trim();
+          .val();
         let ans4 = $("#q4")
-          .val()
-          .trim();
+          .val();
         let ans5 = $("#q5")
-          .val()
-          .trim();
+          .val();
         let ans6 = $("#q6")
-          .val()
-          .trim();
+          .val();
         let ans7 = $("#q7")
-          .val()
-          .trim();
+          .val();
         let ans8 = $("#q8")
-          .val()
-          .trim();
+          .val();
         let ans9 = $("#q9")
-          .val()
-          .trim();
+          .val();
         let ans10 = $("#q10")
-          .val()
-          .trim();
+          .val();
 
         // Form validation
         if (
@@ -281,7 +323,7 @@
             $("#match-name").text(data.name);
             $("#match-img").attr("src", data.photo);
             // Show the modal with the best match
-            $("#results-modal").modal("toggle");
+            $("#results-modal").modal("open");
           });
         }
       });
