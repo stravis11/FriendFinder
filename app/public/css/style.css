@@ -18,3 +18,7 @@ h1 {
   background-color: #4267b2;
   color: #eae6dc !important;
 }
+
+.btn {
+  white-space: nowrap;
+}
