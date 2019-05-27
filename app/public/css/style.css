@@ -13,16 +13,24 @@ h1 {
   color: #eae6dc !important;
 }
 
-#footer {
-  text-align: center;
-  background-color: #4267b2;
-  color: #eae6dc !important;
-}
-
 .btn {
   white-space: nowrap;
 }
 
+/* label focus color */
+.input-field input[type="text"]:focus + label,
+.materialize-textarea:focus:not([readonly]) + label {
+  color: #005eed !important;
+}
+
+/* label underline focus color */
+.input-field input[type="text"]:focus,
+.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #005eed !important;
+  box-shadow: 0 1px 0 0 #005eed !important;
+}
+
+/* Drop down option color */
 ul.dropdown-content.select-dropdown li span {
-  color: #4267b2;
+  color: #005eed;
 }
