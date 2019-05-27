@@ -22,3 +22,7 @@ h1 {
 .btn {
   white-space: nowrap;
 }
+
+ul.dropdown-content.select-dropdown li span {
+  color: #4267b2;
+}
