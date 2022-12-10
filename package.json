@@ -20,6 +20,6 @@
   "homepage": "https://github.com/stravis11/FriendFinder#readme",
   "dependencies": {
     "dotenv": "^8.0.0",
-    "express": "^4.17.0"
+    "express": "^4.17.3"
   }
 }
